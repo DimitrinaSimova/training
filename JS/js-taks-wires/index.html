@@ -82,6 +82,10 @@ function onAddNewCity() {
 
 	 	if(newCity !==""  && existingCity == -1){
 			dataObj["cities"][selectedCountry].push(newCity);
+
+			var	newJsonData	= JSON.stringify( dataObj );
+			window.localStorage.setItem( "jsonCountries", newJsonData );
+			
 			onCountryChanged();	//	reload country's cities.
 	 	}
 	 	return;
@@ -96,17 +100,26 @@ function onAddNewCity() {
 }
 
 function loadCountries(){
-	var request = new XMLHttpRequest();
-	request.overrideMimeType("application/json");
-	request.open('GET', 'js/countries_cities.json', true);
-	request.onreadystatechange = function () {
-          if (request.readyState == 4 && request.status == "200") {
-            // Required use of an anonymous onCountriesLoaded as .open will NOT return a value but simply returns undefined in asynchronous mode
-            onCountriesLoaded(request.responseText);
-          }
-    };
+	var	localData	= window.localStorage.getItem( "jsonCountries" );
 
-    request.send(null);
+	if( localData == null || localData == 'undefined' )
+	{
+		var request = new XMLHttpRequest();
+		request.overrideMimeType("application/json");//	overides the http request mime type to json(default is plain-text)
+		request.open('GET', 'js/countries_cities.json', true);
+		request.onreadystatechange = function () {
+	          if (request.readyState == 4 && request.status == "200") {
+	            // Required use of an anonymous onCountriesLoaded as .open will NOT return a value but simply returns undefined in asynchronous mode
+	            window.localStorage.setItem( "jsonCountries", request.responseText );
+	            onCountriesLoaded(request.responseText);
+	          }
+	    };
+
+	    request.send(null);	// No data needs to be sent along with the request.
+	    return;
+	}
+
+	onCountriesLoaded( localData );
 }
 
 function onCountriesLoaded(countries){
