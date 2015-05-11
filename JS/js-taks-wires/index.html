@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+	    <title>Welcome</title>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width">
+
+	    <link rel="stylesheet" href="css/styles.css">
+	    <link rel="stylesheet" href="css/mediaqueries.css">
+
+	    <script src="js/libs/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<header class="healine clearfix">
+				<h1 class="bold italic">Select a <span>Country</span></h1>
+				<h1 class="bold italic">and see the <span>cities</span> in it</h1>
+				<h1 class="bold italic">or <span>add</span> new ones</h1>
+			</header>
+
+			<section class="main-content clearfix">
+				<select name="countries" id="ddl-country" onchange="onCountryChanged()">
+					<option selected="selected">Select a country</option>
+				</select>
+
+				<textarea id="lst-cities" readonly="readonly" rows="5" cols="5"></textarea>
+
+				<form method="POST" action="#" name="frm-add-new-city">
+					<input type="text" name="txt-enter-city" value="" placeholder="enter text..." id="add-new-city">
+					<input type="submit" onclick="onAddNewCity(); return false;" name="btn-enter-city" value="Add City">
+				</form>
+			</section>
+
+			<section id="modal-msg" class="clearfix">
+				<h2>Choose a country</h2>
+				<img src="img/warning-icon.png" alt="Please select a country!">
+				<p>Please select a country first!</p>
+				<button id="modal-close" class="modal-close" onclick="onCloseModalMsg()">Ok, got it</button>
+			</section>
+
+			<div class="modal-overlay" id="modal-overlay" onclick="onCloseModalMsg()"></div>
+
+			<footer>
+				<p>JS Task Wires, <span class="italic">Stanga One1 2015</span></p>
+			</footer>
+		</div><!-- end of wrapper -->
+	</body>
+</html>
+
+
+<script>
+var dataObj = null;
+
+function onCloseModalMsg() {
+
+	//	modal window to be shown
+	var	modalOverlay = document.getElementById("modal-overlay");
+	var modalMessage = document.getElementById("modal-msg");
+	//var modalClose = document.getElementById("modal-close");
+
+	modalOverlay.style.visibility	= "hidden";
+	modalMessage.style.visibility 	= "hidden";
+	// modalClose.style.transitionDelay = "0s";
+	// modalClose.style.webkitTransitionDelay = "0s";
+}
+
+function onAddNewCity() {
+	var ddlCountries = document.getElementById("ddl-country");
+    var selectedCountryIdx = ddlCountries.selectedIndex;
+
+    if(selectedCountryIdx !== 0){
+		var selectedCountry = ddlCountries.value;
+	 	var newCity = document.getElementById('add-new-city').value;
+
+
+	 	var countryCities = dataObj["cities"][selectedCountry];
+	 	var existingCity = countryCities.indexOf(newCity);
+	 	// alert(existingCity);
+
+	 	if(newCity !==""  && existingCity == -1){
+			dataObj["cities"][selectedCountry].push(newCity);
+			onCountryChanged();	//	reload country's cities.
+	 	}
+	 	return;
+    }
+
+	//	modal window to be shown
+	var	modalOverlay = document.getElementById("modal-overlay");
+	var modalMessage = document.getElementById("modal-msg");
+
+	modalOverlay.style.visibility = "visible";
+	modalMessage.style.visibility = "visible";
+}
+
+function loadCountries(){
+	var request = new XMLHttpRequest();
+	request.overrideMimeType("application/json");
+	request.open('GET', 'js/countries_cities.json', true);
+	request.onreadystatechange = function () {
+          if (request.readyState == 4 && request.status == "200") {
+            // Required use of an anonymous onCountriesLoaded as .open will NOT return a value but simply returns undefined in asynchronous mode
+            onCountriesLoaded(request.responseText);
+          }
+    };
+
+    request.send(null);
+}
+
+function onCountriesLoaded(countries){
+	//console.log(countries);
+	if( dataObj == null || dataObj == undefined ){
+		dataObj = JSON.parse( countries );
+	}
+
+	var ddlCountries = document.getElementById("ddl-country");
+	var lstCountries = dataObj.countries;
+
+	for( var i = 0; i < lstCountries.length; i++ ){
+		//console.log( lstCountries[i] );
+		 var opt = lstCountries[i];
+	     var lstOption = document.createElement("option");
+	     lstOption.textContent = opt;
+	     lstOption.value = opt;
+	     ddlCountries.appendChild(lstOption);
+	}
+}
+
+function onCountryChanged(){
+
+	var ddlCountries = document.getElementById("ddl-country");
+	var ddlCountriesCurrentIdx = ddlCountries.selectedIndex; // взима избрания индекс на страна в dropdown-а
+
+	if(ddlCountriesCurrentIdx !== 0){ // ако има избрана страна, не сме на "Select country" option-a
+		var selectedCountry = ddlCountries.value; // взима селектнатата страна, e.g. "Bulgaria"
+
+		//var lstCities = dataObj.cities;
+		var countryCities = dataObj["cities"][selectedCountry];
+		var txtAreaCities = document.getElementById("lst-cities");
+		var citiesFormatted = countryCities.join("\r\n");
+		txtAreaCities.value = citiesFormatted;
+	}
+}
+
+</script>
+
+<script type="text/javascript">
+	loadCountries();
+</script>

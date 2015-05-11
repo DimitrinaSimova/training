@@ -1,0 +1,31 @@
+@media (max-width: 770px) {
+
+	.wrapper{
+		width: auto;
+		height: 100%;
+	}
+
+	.healine h1{
+		text-align: center;
+	}
+
+	footer p{
+		text-align: center;
+	}
+
+	.main-content #ddl-country,
+	.main-content textarea{
+		float: none;
+		display: block;
+		margin: 10px 0px;
+	}
+
+	.main-content #txt-enter-city{
+		display: inline-block;
+	}
+
+	#modal-msg p{
+		font-size: 1.7vw;
+	}
+	
+}

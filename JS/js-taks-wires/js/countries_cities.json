@@ -1,0 +1,26 @@
+{
+	"countries": [
+						"Bulgaria",
+						"Italy",
+						"France"
+		],
+
+	"cities": {
+	
+		"Bulgaria":[
+                "Plovdiv",
+                "Sofia",
+                "Varna"
+            ],
+		
+		"Italy":[
+                "Rome",
+                "Palermo",
+                "Naples"
+            ],
+		
+		"France": [
+                "Paris"
+            ]
+    }
+}
