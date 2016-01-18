@@ -9,6 +9,12 @@
 		text-align: center;
 	}
 
+	footer{
+		width: 100%;
+		left: 50;
+		margin-left: -50%;
+	}
+
 	footer p{
 		text-align: center;
 	}
@@ -24,8 +30,8 @@
 		display: inline-block;
 	}
 
-	#modal-msg p{
-		font-size: 1.7vw;
+	#modal-msg img{
+		margin-top: -38px;
 	}
 	
 }

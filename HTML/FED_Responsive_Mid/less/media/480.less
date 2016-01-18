@@ -1,0 +1,1048 @@
+@import '../base/variables';
+@import '../base/fonts';
+@import '../base/mixins';
+
+@media screen and (max-width:480px) {
+    // ==========================
+    // Main navigation
+    // ==========================
+	.main-nav {
+		z-index: 7;
+		span.nav-close {
+			position: absolute;
+			right: 0;
+			top: 0;
+			background: white url('../images/nav-close-orange.png') no-repeat center center;
+		}
+		.nav-list {
+			position: relative;
+		}
+
+		ul.nav-list li:last-child{
+			margin-right: 0;
+		}
+		.nav-submenu {
+			right: 45px;
+		}
+	}
+
+	.register {
+        top: -2px;
+        right: -3%;
+
+        a {
+            line-height: 2;
+            font-size: 0.875rem;
+        }
+	}
+
+    a.logo {
+        width: 21%;
+    }
+
+
+
+    // ==========================
+    // Container
+    // ==========================
+	.page-wrapper {
+		max-width: 480px;
+        margin: 0px auto -92px;
+	}
+
+    a.view-all-pubs-btn {
+        display: none;
+    }
+
+    // =================================
+    // Home page
+    // =================================
+    #phase1.hp_phase1 {
+        //width: 30%;
+        top: 50%;
+        .main-ribbon {
+            width: 48%;
+            a {
+                //min-height: 132px;
+                //background-image: url('../images/main_ribbon_hp_mobile.png');
+
+                .ribbon_hp1_mobile {
+                    display: block;
+                }
+
+                .ribbon_hp1_desktop {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .bandeau {
+    	max-width: 480px;
+
+    	.num-uploaded-ads {
+    		display: block;
+    		margin: 34px auto 23px;
+    		font-size: 1.875rem;
+    	}
+
+        .days {
+                position: static;
+                float: none;
+                width: 100%;
+                margin-top: 10px;
+                background: @light-grey-nav;
+
+                a {
+                    position: static;
+
+                    span,
+                    span:nth-child(2) {
+                        float: left;
+                        position: static;
+                        width: auto;
+                        font-size: 1.125rem;
+                        padding: 10px 0px;
+                    }
+                }
+            }
+
+            .days:before {
+                margin-left: 33px;
+            }
+    }
+
+    body.phase-number-3 {
+        .bandeau {
+            .days a span {
+                line-height: 1.1;
+                font-size: 1.0625rem;
+            }
+
+            .days a span:nth-child(2) {
+                font-size: 1.0625rem;
+            }
+        }
+    }
+
+    /*.slider-ads {
+    	max-width: 480px;
+    	padding: 0px 30px;
+
+    	.left-arrow,
+    	.right-arrow {
+    		display: none;
+    	}
+
+    	.slider-ads-cont {
+    	max-width: 480px;
+
+    		.slider-ads-items {
+    			div {
+    				float: none;
+    				margin-right: 0;
+    				margin-bottom: 30px;
+    				.size(418px, 276px);
+
+    				img {
+    					.size(418px, 276px);
+    				}
+    			}
+    		}
+    	}
+    }*/
+
+    .play-video {
+    	max-width: 480px;
+
+    	video {
+    		max-width: 480px;
+    	}
+
+    	.video-title {
+    		margin-top: 5%;
+    		font-size: 37px;
+    		b {
+    			font-family: "Edo";
+    		}
+    	}
+    }
+
+    a.back {
+    	margin-top: 28%;
+        margin-left: 0;
+        font-size: 0.9375rem;
+    }
+
+    // ====================================
+    // STAGES STYLES COMMON FOR ALL - Start
+    // ====================================
+
+    .home-same {
+        display: none;
+    }
+    .main-logo.mob {
+        display: block;
+        position: absolute;
+        width: 33%;
+        top: 1%;
+        left: 39%;
+        z-index: 4;
+        img {
+            width: 57%;
+        }
+    }
+
+    .left-pane.mob {
+        display: block;
+        position: absolute;
+        width: 23%; 
+        top: 9%;
+        left: 37%;
+        z-index: 4;
+        img {
+            width: 100%; 
+
+        }
+    }
+
+    // ====================================
+    // STAGES STYLES COMMON FOR ALL -   End
+    // ====================================
+
+    // ==========================
+    // Stage 1-2            Start
+    // ==========================
+
+    #video-pane-logo1-2.home-same.hp_phase1-2 {
+
+    }
+    .left-pane.hp_phase1-2.mob {
+        top: 4%;
+    }
+    .left-pane.hp_phase2-3.mob {
+        top: 7%;
+    }
+
+    // ==========================
+    // Stage 1-2              End
+    // ==========================
+
+    // ==========================
+    // Stage 2              Start
+    // ==========================
+
+    #video-pane-logo2.home-same.hp_phase2 {
+
+    }
+    .left-pane.hp_phase2.mob {
+        top: 4%;
+    }
+    .left-pane.hp_phase2.mob {
+        top: 7%;
+    }
+
+    // ==========================
+    // Stage 2                End
+    // ==========================
+
+
+    // ==========================
+    // Stage 2-3            Start
+    // ==========================
+
+    // ==========================
+    // Stage 2-3              End
+    // ==========================
+    #w_winner {
+        .main-logo {
+            left: 45%;
+            width: 19%;
+        }
+        .see-winners {
+            a {
+                display: inline-block;
+                position: absolute;
+                top: -84px;
+                left: 23px;
+                width: 190px;
+                height: 45px;
+
+                span:nth-child(1) {
+                    display: none;
+                }
+                span:nth-child(2) {
+                    display: inline-block;
+                    position: absolute;
+                    padding-left: 47px;
+                    
+                    width: 191px;
+                    z-index: 4;
+                    line-height: 43px;
+
+                    background: #f7f7f7;
+                    color: @orange;
+                    font-family: 'Gotham-Bold';
+                    font-size: 12px;
+                    text-transform: uppercase;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 10px;
+                        height: 14px;
+                        background: url('@{img-path}/see-winners-orange-l-arrow.png') no-repeat;
+                        left: 28px;
+                        top: 16px;
+                    }
+                }
+            }
+        }
+        .home-carousel-slide .carousel-controls {
+            bottom: 0;
+        }
+        .winner-greeting {
+            left: 35%;
+            top: 11%;
+        }
+    }
+    #ww_winner {
+        .devider-winners.with-inerview {
+            margin-top: -37px;
+            margin-bottom: 0;
+            .num-uploaded-ads {
+                font-size: 22px;
+            }
+        }
+    }
+
+
+    // ==========================
+    // Gallery page styles
+    // ==========================
+        .gallery-page {
+            padding: 0px;
+            .box-sizing(border-box);
+
+            .bandeau {
+                max-width: 480px;
+                padding: 10px 0px;
+                margin: 0 auto;
+
+            .filters {
+                  float: none;
+                  width: 100%;
+                  margin: 0 19px;
+
+                    .filter-by-category {
+                        width: 45%;
+                        a.filter-by-category-btn {
+                            margin-left: 5%;
+                            padding: 5px 10px;
+                            font-size: 0.875rem;
+                            color: @light-steel-grey;
+                            background-color: @white;
+                            border: 3px solid @light-steel-grey;
+                        }
+
+                        a.filter-by-category-btn:after {
+                            content: "";
+                            //float: right;
+                            right: 10px;
+                            .size(25px, 10px);
+                            background: url('@{img-path}/dropdown-arrow-grey-mobile.png') right no-repeat;
+                        }
+
+                        ul.filter-by-category-list {
+                            width: 92%;
+                            margin-left: 11px;
+                            background-color: @white;
+                            border: 3px solid @light-steel-grey;
+                            border-top: none;
+                        }
+                    }
+
+                     a.filter-by-date {
+                         margin-left: 4%;
+                         padding: 5px 10px;
+                         font-size: 0.875rem;
+                         color: @light-steel-grey;
+                         background-color: @white;
+                         border: 3px solid @light-steel-grey;
+                    }             
+
+                    a.filter-by-date:after{
+                        content: "";
+                        float: right;
+                        margin-top: 7px;
+                        .size(25px, 10px);
+                        background: url('@{img-path}/dropdown-arrow-grey-mobile.png') right no-repeat;
+                    }
+
+                    .glyphicon {
+                        display: none;
+                    }
+            }
+
+            .num-uploaded-ads {
+                 float: none;
+                 width: 100%;
+                 margin-right: 0;
+                 margin-top: 18px;
+                 font-size: 2.125rem;
+            }
+
+            .days {
+                position: static;
+                float: none;
+                width: 100%;
+                margin-top: 23px;
+                background: @light-grey-nav;
+
+                 a span,
+                    a span:nth-child(2) {
+                    float: left;
+                    font-size: 1.0625rem;
+                    padding: 10px 0px;
+                 }
+            }
+
+                 .days:before {
+                    margin-left: 10%;
+                 }
+
+            }
+
+            .gallery-grid {
+                width: 100%;
+                padding: 0px 30px 92px 30px;
+                .box-sizing(border-box);
+
+
+                .gallery-item {
+                    width: 100%;
+
+                    .description-block {
+                        .description-holder {
+                          top: 41%; 
+                        }
+
+                        h1, h2 {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        // ==========================
+        // Video details page
+        // ==========================
+        .play-video-cont {
+            width: 100%;
+
+            .video-wrapper {
+                video {
+                    width: 100%;
+                }
+            }
+
+            .video-headline {
+                margin-top: 12%;
+                margin-bottom: 5%;
+                font-size: 2.125rem;
+
+                span {
+                    font-family: Edo;
+                    font-weight: normal;
+                }
+            }
+        }
+
+
+        .video-details.num-uploaded-ads {
+            display: none;
+        }
+
+        // Videojs controls
+
+        .video-details.carousel-holder { 
+            .ads-carousel {
+                display: none;
+            }
+        }
+
+
+        .carousel-holder .prev-arrow,
+        .carousel-holder .next-arrow {
+            display: none !important;
+        }
+
+        .home-carousel-slide .carousel-controls {
+            bottom: 0px;
+            left: 0;
+            right: 0;
+            .video-name {
+                background: rgba(0, 0, 0, 0.5);
+                border: none;
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                margin-bottom: 2px;
+            }
+            .play, .volume {
+                float: left;
+                margin-bottom: 9px;
+            }
+            .play {
+                margin-left: 20px;
+            }
+        }
+
+        .home-carousel {
+            margin-bottom: 40px;
+        }
+        .slick-dots {
+            bottom: -25px;
+            li button {
+                .size(12px, 12px);
+                background-color: #c6c6c6;
+                color: #c6c6c6;
+                border: none;
+            }
+        }
+
+        // Ads carousel
+
+        .ads-carousel .ads-slide {
+            display: block;
+            margin-bottom: 30px;
+            width: 100%;
+            //width: 30% !important;
+            padding: 0 20px;
+            box-sizing: border-box;
+            img {
+                float: none;
+                width: 100%;
+                border: 1px solid red;
+            }
+        }
+
+    // ==========================
+    // How to win page styles start
+    // ==========================
+    .how-to-win-page {
+        .bandeau {
+            display: none;
+        }
+
+        .description {
+            max-width: 85%;
+            margin: 25px auto 0 auto;
+
+            h1 {
+                font-size: 1.25rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 0.9375rem;
+            }
+        }
+        .steps {
+            padding: 0;
+            article {
+                width: 50%;
+                margin: 0;
+                padding: 1% 5% 6% 5%;
+
+                h2 {
+                    font-size: 1.5625rem;
+                }
+
+                img {
+                    .size(55px, 50px);
+                }
+
+                p {
+                    font-size: 1.0625rem;
+                }
+            
+            }
+
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        .msg-box {
+            height: auto;
+            padding: 2%;
+
+            p {
+                line-height: 1.5;
+                font-size: 1rem;
+            }
+
+            p:before {
+                background-position: -92px -135px;
+            }
+        }
+
+        .slick-dots{
+            bottom: 15px;
+            li button {
+                .size(13px, 13px);
+            }
+        }
+    }
+
+    // ==========================
+    // Winner page styles
+    // ==========================
+    #ww_winner {
+        .devider-winners {
+            margin-top: -50px;
+            margin-bottom: 10px;
+        }
+        .num-uploaded-ads {
+            margin-top: 0;
+        }
+    }
+
+    // ==========================
+    // How to win page styles end
+    // ==========================
+        
+    // ==========================
+    // How to win pubs-tv styles start
+    // ==========================
+
+    #pubs-tv.pubs-tv-section {
+
+        .logo-holder {
+            width: 20%;
+            left: 43%;
+        }
+        .num-uploaded-ads {
+            margin: 0;
+            font-size: 31px;
+        }
+        .slide-item-holder {
+            width: 100%;
+        }
+    }
+    // ==========================
+    // How to win pubs-tv styles end
+    // ==========================
+    .winners-page {
+        .top-msg h2 {
+            max-width: 100%;
+            padding: 0 2px;
+            .box-sizing(border-box);
+        }
+        .winners-grid {
+            width: 100%;
+            //padding: 0px 30px;
+            //.box-sizing(border-box);
+
+            .win-cattegory {
+                .row {
+                    margin: 0 5%;
+                }
+                .winners-item {
+                    float: none;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
+    // ==========================
+    // Upload (register) page
+    // ==========================
+    html.upload-video {
+        .page-wrapper {
+            background: none;
+        }
+
+        .upload-mask {
+            display: none;
+        }
+    }
+
+    .upload-videos-page {
+        margin: 30% auto 0% auto;
+        //margin-bottom: 30%;
+        background: none;
+
+        .upload-videos-cont {
+            width: 420px;
+            margin: 0 auto;
+            position: relative;
+            text-align: center;
+            .transform(translate(-58%,-19%));
+            background-color: transparent;
+            
+            .middle {
+                display: none;
+            }
+
+            .center-right-side {
+                transform: translateY(0%);
+            }
+
+            h3 {
+                font-size: 1.0625rem;
+            }
+
+            p {
+                font-size: 0.9375rem;
+            }
+
+            .file-upload {
+                padding: 10px 30px;
+                font-size: 1.6875rem;
+            }
+
+            .file-upload:before {
+                height: 23px;
+                background: url(../images/sprite.png) -171px -43px no-repeat;
+            }
+
+            .left-side, 
+            .right-side {
+                float: none;
+                margin: 0 auto;
+                padding: 17px 0px;
+            }
+
+            .left-side {
+                .ribbon {
+                    top: 0;
+                    left: 0;
+                    .size(235px, 220px);
+                }
+            }
+
+
+            .right-side {
+                width: 65%;
+                position: static;
+
+                input[type="text"].txt-styles {
+                    width: 250px;
+                    line-height: 1.5;
+                    font-size: 1.375rem;
+                }
+
+                .sep-line {
+                    width: 283px;
+                    span {
+                        top: 0;
+                        padding: 5px;
+                        font-size: 1.375rem;
+                    }
+                }
+
+                div.radio-styles {
+                    margin-top: 25px;
+                    margin-left: 0;
+
+                    input[type="radio"] {
+                        .size(30px, 30px);
+                        margin: 0px;
+                        background: url(../images/sprite.png) -86px -158px no-repeat;
+                    }
+
+                    input[type="radio"]:checked {
+                        background-position: -86px -187px;
+                    }
+
+                    label {
+                        font-size: 26px;
+                        .category-icon {
+                            .size(45px, 55px);
+                            background: none;
+                            margin: -10px 23px 0px 28px;
+                        }
+
+                        .fashion {
+                            background: url('@{img-path}/fashion.png') no-repeat;
+                        }
+
+                        .games {
+                            background: url('@{img-path}/games.png') no-repeat;
+                        }
+
+                        .high-tech {
+                            background: url('@{img-path}/high-tech.png') no-repeat;
+                        }
+
+                        .other {
+                            background: url('@{img-path}/other_cat.png') no-repeat;
+                        }
+                    }
+                }
+            }
+
+            .step-2.right-side {
+                width: 85%;
+
+                h3 {
+                    margin-bottom: 42px;
+                }
+            }
+
+            .step-num {
+                .size(60px, 60px);
+                margin: 0 auto;
+                span {
+                    line-height: 1.8;
+                }
+            }
+
+            a.btn-fb{
+                display: block;
+                font-size: 23px;
+                width: 270px;
+                padding: 16px 5px;
+            }
+
+            a.btn-fb:before {
+                content: "";
+                float: left;
+                width: 40px;
+                height: 30px;
+                background: url(../images/sprite.png) -222px -44px no-repeat;
+            }
+
+            a.reg {
+                display: inline-block;
+                padding: 11px 30px;
+            }
+
+            a.validate{
+                display: block;
+                width: 100px;
+                padding: 14px 18px;
+            }
+
+            .popin, .modal-video {
+                width: 100%;
+                position: static;
+
+                video {
+                    width: 100%;
+                    position: static;
+                    margin-bottom: 0;
+                }
+
+                a.uploader-msg {
+                    margin-top: 0;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    // ==========================
+    // WINNER PAGE STYLES START
+    // ==========================
+
+    #ww_winner .num-uploaded-ads {
+          padding-top: 34px;
+    }
+
+    #ww_winner .interview-of-winner {
+
+        width: 100%;    
+        .slick-track {
+            width: 100%;  
+            .slick-slide {
+                width: 100%;    
+            }   
+        }
+    }
+    #w_winner .home-carousel {
+        margin-bottom: 0;
+    }
+    #w_winner .num-votes {
+        margin-left: 10px;
+    }
+    #w_winner .votes-and-share .num-votes {
+        width: 58%;
+    }
+    #w_winner .votes-and-share .socials {
+        width: 100px;
+    }
+
+    // ==========================
+    // WINNER PAGE STYLES END
+    // ==========================
+
+
+    // ==========================
+    // MAKING OF STYLES START
+    // ==========================
+    .page-wrapper .making-of .carousel-holder .white-socials {
+        display: none;
+    }
+    .making-of .home-carousel-slide .carousel-controls .volume,
+    .making-of .home-carousel-slide .carousel-controls .play,
+    .making-of .home-carousel-slide .carousel-controls .paused {
+        position: absolute;
+        bottom: 56px;
+    }
+    .making-of .home-carousel-slide .carousel-controls .volume {
+        left: 60px;
+    }
+
+    .making-of .carousel-holder .logo-holder {
+        top: 0;
+    }
+
+    .making-of .bandeau .carousel-devider {
+        margin-bottom: 10px;
+    }
+
+    // ==========================
+    // MAKING OF STYLES END
+    // ==========================
+
+    // =============================
+    // MAKING-OF-DETAILED-PAGE START
+    // =============================
+    #making-of-details {
+        .logo {
+            width: 70px;
+        }
+        .video-wrapper {
+            background-color: #000;
+        }
+    }
+
+    #making-of-details .carousel-devider {
+        margin-top: 0;
+    }
+
+    #making-of-details.making-of .carousel-controls {
+        position: static;
+        .video-name {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+    }
+
+    #making-of-details .video-wrapper .carousel-controls .volume.unmuted {
+        position: absolute;
+        left: 60px;
+        bottom: 36px;
+    }
+    #making-of-details .video-wrapper .carousel-controls .volume {
+        position: absolute;
+        left: 60px;
+        bottom: 36px;
+    }
+    #making-of-details .video-wrapper .carousel-controls .play.paused {
+        position: absolute;
+        left: 7px;
+        bottom: 36px;
+    }
+    #making-of-details .video-wrapper .carousel-controls .play {
+        position: absolute;
+        left: 7px;
+        bottom: 36px;
+    }
+
+    // #making-of-details .carousel-controls .volume,
+    // #making-of-details .carousel-controls .play,
+    // #making-of-details .carousel-controls .pause {
+    //     position: absolute;
+    //     margin-left: 58px;
+    // }
+    // #making-of-details .carousel-controls .play,
+    // #making-of-details .carousel-controls .pause {
+    //     left: -50px;
+    //     bottom: 6px;
+    // }
+    // #making-of-details .carousel-controls .volume {
+    //     bottom: 6px;
+    // }
+
+    #making-of-details.making-of {
+        .white-socials {
+            display: none;
+        }
+    }
+
+    // =============================
+    // MAKING-OF-DETAILED-PAGE END
+    // =============================
+
+
+    // ==========================
+    // ERROR PAGE STYLES START
+    // ==========================
+
+    #error-page.how-to-win-page .description {
+        margin: 0;
+    }
+
+    // ==========================
+    // ERROR PAGE STYLES END
+    // ==========================
+
+    
+    // ==========================
+    // Footer pages styles
+    // ==========================
+    .footer-pages {
+        h2 {
+            font-size: 1.625rem;
+            margin: 0 auto -30px auto;
+        }
+
+        h3 {
+            font-size: 1.375rem;
+        }
+
+        h2.help-headline {
+            margin: -10px auto -6px auto;
+        }
+
+        p {
+            font-size: 0.875rem;
+        }
+
+        .top-line {
+            display: block;
+        }
+
+        .content {
+            width: 90%;
+        }
+
+        .question-box {
+            ul li, span {
+                font-size: 0.875rem;
+            }
+
+            .icons {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}

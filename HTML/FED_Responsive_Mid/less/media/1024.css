@@ -1,0 +1,30 @@
+@media screen and (max-width: 1024px) {
+  .main-nav {
+    text-align: center;
+    background-color: #f7f7f7;
+  }
+  .main-nav span.nav-close {
+    float: right;
+    background: url('../images/nav-close-orange.png') no-repeat center center;
+  }
+  .main-nav ul.nav-list {
+    float: none;
+    min-width: inherit;
+    background-color: #ffffff;
+  }
+  .main-nav ul.nav-list li {
+    float: none;
+  }
+  .main-nav ul.nav-list li:last-child {
+    margin-right: 0;
+  }
+  .main-nav .nav-list li a,
+  .main-nav .nav-list li a:active,
+  .main-nav .nav-list li a:visited,
+  .main-nav .nav-list li a:hover {
+    float: none;
+    display: block;
+    font-size: 17px;
+    margin-left: 0px;
+  }
+}

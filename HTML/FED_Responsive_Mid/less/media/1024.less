@@ -1,0 +1,81 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+@media screen and (max-width:1024px) {
+	.page-wrapper {
+		max-width: @tablet;
+	}
+
+	.col-1, .col-2 {
+		width: 100%;
+	}
+
+	.col-2 {
+		float: left;
+	}
+
+	/*//////////////////////////////////
+			Right column 
+	///////////////////////////////////*/
+	.section-1 {
+		height: 200px;
+
+		.menu-section {
+			.buggur-menu {
+				left: auto;
+				right: 0;
+			}
+		}
+
+		#myCanvas1 {
+			display: none;
+		}
+
+		.top {
+			top: 35%;
+			left: 13%;
+		}
+
+		.bottom {
+			bottom: 30%;
+			left: 13%;
+		}
+	}
+
+	.section-7 {
+		width: 60%;
+	}
+
+	.section-8 {
+		width: 40%;
+	}
+
+	.section-9, .section-10 {
+		float: left;
+		width: 50%;
+		height: 464px;
+		overflow: hidden;
+	}
+
+	.section-9 {
+		background-position-x: center;
+    	background-position-y: 25%;
+
+    	.project-description {
+    		padding-top: 23%;
+    	}
+	}
+
+	.section-11 {
+		float: left;
+		width: 65%;
+		height: 340px;
+	}
+
+	.section-12 {
+		float: left;
+		width: 35%;
+		height: 340px;
+	}
+}
+
