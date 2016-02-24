@@ -97,7 +97,8 @@ li a {
 .sub-nav {
 	position: absolute;
 	top: 33%;
-	left: 28%;
+	left: 20%;
+	//left: 28%;
 	text-align: left;
 	max-width: 40%;
 
@@ -129,7 +130,7 @@ li a {
 	margin: 35% 33% auto;
 
 	.social {
-		float: left;
+		display: inline-block;
 		width: 30px;
 		height: 30px;
 		margin-left: 6px;
@@ -225,12 +226,8 @@ li a {
 	}
 }
 
-
-/*//////////////////////////////////
-			Left column 
-///////////////////////////////////*/
 .content-box {
-	width: 30%;
+	width: 40%;
 	float: left;
 	margin: 4% 7%;
 
@@ -251,10 +248,14 @@ li a {
 	}
 }
 
+/*//////////////////////////////////
+			Left column 
+///////////////////////////////////*/
+
 .section-2 {
 	height: 499px;
 	position: relative;
-	background: url("@{img-path}/home_01.png") no-repeat @gray-dim-v2 right top;
+	background: url("@{img-path}/home_01.png") no-repeat @gray-dim-v2 right center;
 	background-size: contain;
 }
 
@@ -277,11 +278,12 @@ li a {
 	width: 55%;
 	height: 500px;
 	float: left;
-	background: url("@{img-path}/home_02.png") no-repeat center center;
+	background: url("@{img-path}/home_02.png") no-repeat center right;
 
 	.project-description {
 		margin-top: 15%;
-		margin-left: 18%;
+		margin-left: 12%;
+		//margin-left: 18%;
 
 		.info-box, .more-section {
 			float: none;
@@ -373,7 +375,7 @@ li a {
 	height: 300px;
 	float: left;
 	position: relative;
-	background: url("@{img-path}/home_08.png") no-repeat center center;
+	background: url("@{img-path}/home_08.png") no-repeat center center @ghost-white;
 	background-size: contain;
 
 	.project-description {
@@ -421,7 +423,7 @@ li a {
 	}
 }
 
-.section-13 {
+.section-14 {
 	width: 50%;
 	height: 644px;
 	float: left;
@@ -429,25 +431,26 @@ li a {
 	// background-size: 100% 100%;
 }
 
-.section-14 {
+.section-13 {
+	float: right;
 	width: 50%;
 	height: 644px;
-	float: left;
 	position: relative;
+
 	color: @gray-graffiti;
 	background-color: @gray-dim-v2;
 
 	.content-box {
 		float: right;
-		margin: 20% 19% 0 0;
+		margin: 23% 4% 0 0;
 	}
 
 	.socials {
-		margin: 33% 30% auto;
+		margin: 43% 18% auto;
 	}
 
 	.flying-text {
-		top: 23%;
+		top: 20%;
 		left: 16%;
 
 		line-height: 1.2;
@@ -579,7 +582,7 @@ li a {
 .section-10 {
 	height: 464px;
 	position: relative;
-	background: url("@{img-path}/home_04.png") no-repeat top center @ghost-white;
+	background: url("@{img-path}/home_04.png") no-repeat top center @smoke-white;
 	background-size: contain;
 
 	.project-description {
@@ -635,7 +638,7 @@ li a {
 
 	.flying-text {
 		top: 20%;
-		left :22%;
+		left: 22%;
 		color: @gray-graffiti;
 	}
 

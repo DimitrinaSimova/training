@@ -328,7 +328,7 @@ li a:hover {
 .sub-nav {
   position: absolute;
   top: 33%;
-  left: 28%;
+  left: 20%;
   text-align: left;
   max-width: 40%;
 }
@@ -354,7 +354,7 @@ li a:hover {
   margin: 35% 33% auto;
 }
 .socials .social {
-  float: left;
+  display: inline-block;
   width: 30px;
   height: 30px;
   margin-left: 6px;
@@ -432,11 +432,8 @@ li a:hover {
   text-align: center;
   background: url("../img/heart_black.png") no-repeat;
 }
-/*//////////////////////////////////
-			Left column 
-///////////////////////////////////*/
 .content-box {
-  width: 30%;
+  width: 40%;
   float: left;
   margin: 4% 7%;
 }
@@ -453,10 +450,13 @@ li a:hover {
   width: 100%;
   height: auto;
 }
+/*//////////////////////////////////
+			Left column 
+///////////////////////////////////*/
 .section-2 {
   height: 499px;
   position: relative;
-  background: url("../img/home_01.png") no-repeat #e9eae2 right top;
+  background: url("../img/home_01.png") no-repeat #e9eae2 right center;
   background-size: contain;
 }
 .section-3 {
@@ -476,11 +476,11 @@ li a:hover {
   width: 55%;
   height: 500px;
   float: left;
-  background: url("../img/home_02.png") no-repeat center center;
+  background: url("../img/home_02.png") no-repeat center right;
 }
 .section-4 .project-description {
   margin-top: 15%;
-  margin-left: 18%;
+  margin-left: 12%;
 }
 .section-4 .project-description .info-box,
 .section-4 .project-description .more-section {
@@ -559,7 +559,7 @@ li a:hover {
   height: 300px;
   float: left;
   position: relative;
-  background: url("../img/home_08.png") no-repeat center center;
+  background: url("../img/home_08.png") no-repeat center center #fcfcfc;
   background-size: contain;
 }
 .section-7 .project-description {
@@ -599,36 +599,36 @@ li a:hover {
 .section-8 .project-description .more-section .likes {
   margin-top: 26px;
 }
-.section-13 {
-  width: 50%;
-  height: 644px;
-  float: left;
-}
 .section-14 {
   width: 50%;
   height: 644px;
   float: left;
+}
+.section-13 {
+  float: right;
+  width: 50%;
+  height: 644px;
   position: relative;
   color: #333333;
   background-color: #e9eae2;
 }
-.section-14 .content-box {
+.section-13 .content-box {
   float: right;
-  margin: 20% 19% 0 0;
+  margin: 23% 4% 0 0;
 }
-.section-14 .socials {
-  margin: 33% 30% auto;
+.section-13 .socials {
+  margin: 43% 18% auto;
 }
-.section-14 .flying-text {
-  top: 23%;
+.section-13 .flying-text {
+  top: 20%;
   left: 16%;
   line-height: 1.2;
   color: #333333;
 }
-.section-14 .flying-text p {
+.section-13 .flying-text p {
   padding-top: 20px;
 }
-.section-14 .copyright-text {
+.section-13 .copyright-text {
   position: absolute;
   bottom: 8%;
   left: 17%;
@@ -636,7 +636,7 @@ li a:hover {
   font-size: 12px;
   font-family: "RobotoCondensed-Regular";
 }
-.section-14 .copyright-text:before {
+.section-13 .copyright-text:before {
   content: "";
   float: left;
   width: 13px;
@@ -792,9 +792,16 @@ li a:hover {
 .section-12 .line {
   left: 40%;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1240px) {
   .page-wrapper {
-    max-width: 1024px;
+    max-width: 1240px;
+  }
+  .row:first-of-type .col-1 {
+    width: 60%;
+  }
+  .row:first-of-type .col-2 {
+    width: 40%;
+    float: right;
   }
   .col-1,
   .col-2 {
@@ -803,9 +810,61 @@ li a:hover {
   .col-2 {
     float: left;
   }
-  /*//////////////////////////////////
-			Right column 
-	///////////////////////////////////*/
+  .section-4 .project-description .more-section .likes {
+    margin-top: 10%;
+  }
+  .section-7 {
+    width: 60%;
+  }
+  .section-8 {
+    width: 40%;
+  }
+  .section-8 .project-description {
+    margin-top: 15%;
+    margin-right: 15%;
+  }
+  .section-9,
+  .section-10 {
+    float: left;
+    width: 50%;
+    height: 464px;
+    overflow: hidden;
+  }
+  .section-9 {
+    background-position-x: center;
+    background-position-y: 25%;
+  }
+  .section-9 .project-description {
+    padding-top: 23%;
+  }
+  .section-11 {
+    float: left;
+    width: 60%;
+    height: 340px;
+  }
+  .section-12 {
+    float: left;
+    width: 40%;
+    height: 340px;
+  }
+  .section-12 .flying-text {
+    left: 19%;
+  }
+  .section-12 .sub-nav {
+    left: 12%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .page-wrapper {
+    max-width: 1024px;
+  }
+  .row:first-of-type .col-1 {
+    width: 100%;
+  }
+  .row:first-of-type .col-2 {
+    width: 100%;
+    float: right;
+  }
   .section-1 {
     height: 200px;
   }
@@ -824,34 +883,67 @@ li a:hover {
     bottom: 30%;
     left: 13%;
   }
-  .section-7 {
-    width: 60%;
+  .section-13 .content-box {
+    float: none;
+    width: 70%;
+    margin: 20% auto 0 auto;
+    text-align: center;
   }
-  .section-8 {
-    width: 40%;
+  .section-13 .socials {
+    margin: 15% auto 0 auto;
   }
-  .section-9,
-  .section-10 {
-    float: left;
-    width: 50%;
-    height: 464px;
-    overflow: hidden;
+  .section-13 .flying-text {
+    position: static;
+    max-width: 60%;
+    margin: 0 auto;
+    text-align: center;
   }
-  .section-9 {
-    background-position-x: center;
-    background-position-y: 25%;
+}
+@media screen and (max-width: 960px) {
+  .page-wrapper {
+    max-width: 960px;
   }
-  .section-9 .project-description {
-    padding-top: 23%;
+  .content-box {
+    margin: 4%;
   }
-  .section-11 {
-    float: left;
-    width: 65%;
-    height: 340px;
+  .socials {
+    margin: 35% 15% auto;
   }
+  .section-3,
+  .section-4,
+  .section-7,
+  .section-8,
+  .section-11,
   .section-12 {
+    width: 100%;
+  }
+  .section-6 {
+    background-position-y: 100%;
+  }
+  .section-8 .project-description {
+    margin-top: 10%;
+    margin-right: 25%;
+  }
+  .section-8 .project-description .info-box,
+  .section-8 .project-description .more-section {
     float: left;
-    width: 35%;
-    height: 340px;
+  }
+  .section-8 .project-description .more-section {
+    margin-left: 35px;
+  }
+}
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 40px;
+  }
+  .page-wrapper {
+    max-width: 480px;
+  }
+  [class*='section-'] {
+    width: 100%;
+  }
+  .section-8 .project-description .info-box,
+  .section-8 .project-description .more-section {
+    float: none;
   }
 }

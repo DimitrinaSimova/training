@@ -1,22 +1,22 @@
 @import '../base/variables';
 @import '../base/mixins';
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:@tablet-max) {
 	.page-wrapper {
-		max-width: @tablet;
+		max-width: @tablet-max;
 	}
 
-	.col-1, .col-2 {
-		width: 100%;
+	.row:first-of-type {
+		.col-1 {
+			width: 100%;
+		}
+
+		.col-2 {
+			width: 100%;
+			float: right;
+		}
 	}
 
-	.col-2 {
-		float: left;
-	}
-
-	/*//////////////////////////////////
-			Right column 
-	///////////////////////////////////*/
 	.section-1 {
 		height: 200px;
 
@@ -42,40 +42,24 @@
 		}
 	}
 
-	.section-7 {
-		width: 60%;
-	}
+	.section-13 {
+		.content-box {
+			float: none;
+			width: 70%;
+			margin: 20% auto 0 auto;
+			text-align: center;
+		}
 
-	.section-8 {
-		width: 40%;
-	}
+		.socials {
+			margin: 15% auto 0 auto;
+		}
 
-	.section-9, .section-10 {
-		float: left;
-		width: 50%;
-		height: 464px;
-		overflow: hidden;
-	}
-
-	.section-9 {
-		background-position-x: center;
-    	background-position-y: 25%;
-
-    	.project-description {
-    		padding-top: 23%;
-    	}
-	}
-
-	.section-11 {
-		float: left;
-		width: 65%;
-		height: 340px;
-	}
-
-	.section-12 {
-		float: left;
-		width: 35%;
-		height: 340px;
+		.flying-text {
+			position: static;
+			max-width: 60%;
+			margin: 0 auto;
+			text-align: center;
+		}
 	}
 }
 

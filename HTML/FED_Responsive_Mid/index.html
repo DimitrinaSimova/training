@@ -236,10 +236,6 @@
 
 			<div class="row clearfix">
 				<div class="col section-13">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106089.82207313826!2d-118.2261492810237!3d33.80439130381879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2cae84099d759%3A0xa1003afac42a8faa!2z0JvQvtC90LMg0JHQuNC50YcsINCa0LDQu9C40YTQvtGA0L3QuNGPLCDQodGK0LXQtNC40L3QtdC90Lgg0YnQsNGC0Lg!5e0!3m2!1sbg!2sbg!4v1452593158606" width="100%" height="644px" frameborder="0" style="border:0" allowfullscreen></iframe>
-				</div>
-
-				<div class="col section-14">
 					<div class="content-box">
 						<a href="#" class="logo">
 							<img src="img/logo.png" alt="Stanga One1">
@@ -264,6 +260,11 @@
 
 					<p class="copyright-text">2015 - All rights reserved</p>
 				</div>
+
+				<div class="col section-14">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106089.82207313826!2d-118.2261492810237!3d33.80439130381879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2cae84099d759%3A0xa1003afac42a8faa!2z0JvQvtC90LMg0JHQuNC50YcsINCa0LDQu9C40YTQvtGA0L3QuNGPLCDQodGK0LXQtNC40L3QtdC90Lgg0YnQsNGC0Lg!5e0!3m2!1sbg!2sbg!4v1452593158606" width="100%" height="644px" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+
 			</div>
 		</div><!-- end of wrapper -->
 	</body>
@@ -290,21 +291,6 @@
 });
 
 //Canvas
-	// var c = document.getElementById("myCanvas");
-	// var ctx = c.getContext("2d");
-	// ctx.strokeStyle = "white";
-	// ctx.beginPath();
-
-	// ctx.moveTo(0,100);
-	// ctx.lineTo(200,0);
-	// ctx.closePath();
-
-	// ctx.lineWidth = 1;
-	// ctx.stroke();
-
-	//var canvas 	= document.getElementById('myCanvas1');
-	// var canvas = document.querySelectorAll(".myCanvas");
-
 	function drawCanvas() {
 		$.each($('.myCanvas'), function (ind, canvas)  {
 			
@@ -314,7 +300,7 @@
 			console.log(parent.offsetWidth + ' H: ' + parent.offsetHeight);
 			// return;
 			var ctx 	= canvas.getContext('2d');
-			var cWidth 	= $(canvas).attr('rel-type') == 100 ? parent.offsetWidth : (parent.offsetWidth / 2); //canvas.width;
+			var cWidth 	= $(canvas).attr('rel-type') == 100 ? parent.offsetWidth : (parent.offsetWidth / 1.5); //canvas.width;
 			var cHeight = parent.offsetHeight; //canvas.height;
 
 			ctx.strokeStyle = "white";
@@ -324,17 +310,7 @@
 			ctx.stroke();
 		});
 	}
-	// var ctx 	= canvas.getContext('2d');
-	// var cWidth 	= canvas.width;
-	// var cHeight = canvas.height;
-
-	// ctx.strokeStyle = "white";
-	// ctx.beginPath();
-	// ctx.moveTo(0, cHeight); // 1st point
-	// ctx.lineTo(cWidth, 0);
-	// ctx.stroke();
-
 
 	// var x = document.querySelectorAll(".myCanvas");
- //    x[0].style.backgroundColor = "yellow";
+	//x[0].style.backgroundColor = "yellow";
 </script>
